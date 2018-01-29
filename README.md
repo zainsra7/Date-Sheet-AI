@@ -3,7 +3,7 @@ Mid Term Date Sheet Generator using Genetic Algorithm.
 
 Date-Sheet Generator is an application that uses the genetic algorithm to generate a date-sheet with maximum fitness according to our given criteria. Program runs until given generation while keeping track of maximum fitness date-sheet up till the current generation and after every 5 generations we displays the date-sheet (after 7 seconds wait time)of maximum fitness of current generation and then in the end after successfully completion displays the one Best/ideal date-sheet among all generations.
 
-## Given Criteria: 
+## Initial Parameters
 
 Population = 100
 
@@ -34,7 +34,7 @@ That is,
 
 Where in “13-Cal”, 13 is the batch number and Cal is course name (Calculus) and courses are being offered to the allotted batch only.
 
-## Fitness Criteria:
+## Fitness Criteria
 
 ```
   Total Score: 100, a date sheet will lose score based on availability of following 3 conditions:
@@ -49,7 +49,7 @@ Where in “13-Cal”, 13 is the batch number and Cal is course name (Calculus) 
   (Max 1 gap of Time Slot is allowed, not more than that)
 ```
 
-## Steps of Genetic AI which we used in our project (Implemented in dialog.cpp file):
+## Steps of Genetic Algorithm
 
 1.	Generating Population of 100 DateSheets , random room, timeslot and day is choosen for a randomly picked course from the above course list. This process is completed when all the 20 courses have been allotted to a particular datesheet. ( Here we have handled the case that a Same Course can’t appear more than one in a datesheet). 
 For Generation of population we take help of Initialize_TT() function written in population.h that takes an array of string of size 20 that contains courses in the form “13-Cal”, “10-ATO” etc.
@@ -76,11 +76,13 @@ where if a particular date sheet has a fitness of lets say 72 then it falls unde
 
 5.	Replace the old population with the newly generated one and then perform steps 2 to 5 until given generations.
 
-## Application Details: 
+## Application Detail
 
 Implemented in QT (code is in C++)
 
-Generated an exe file and checked the exe running in a 64 bit computer
+Generated an exe file and checked the exe running in a 64 bit computer, Following is a screenshot of the application: 
+
+![Date-Sheet Generator](https://image.ibb.co/dfa4ZG/aiproject.png)
 
 * Each batch has a particular color so that it’s easier to read, i.e. Batch 10 courses have a color Red.
 
@@ -90,7 +92,7 @@ Generated an exe file and checked the exe running in a 64 bit computer
 
   * If Same Color appear in consecutive time slots then It means date sheet has consecutive courses.
 
-### To measure Gap easily, do following :- 
+### To measure Gap easily, do following :
 
   * As only 1 Gap is allowed , so only see Color/Courses in TimeSlot 1 and 2. 
   
@@ -98,7 +100,7 @@ Generated an exe file and checked the exe running in a 64 bit computer
   
   * For Time Slot 2, if the same color appears in TimeSlot 5 for a given same day then it means date sheet has a gap.
 
-## Files:
+## Files
 
 * dialog.cpp (our main dialog), in this file runGA() is called when green button is clicked so it’s our main.
 

@@ -1,6 +1,8 @@
 # Date-Sheet-AI
 Mid Term Date Sheet Generator using Genetic Algorithm. 
 
+  #### I coded this whole project from scratch for my undergrad course of Artificial Intelligence (Fall 2016, Fast-Nu Lahore).
+
 Date-Sheet Generator is an application that uses the genetic algorithm to generate a date-sheet with maximum fitness according to our given criteria. Program runs until given generation while keeping track of maximum fitness date-sheet up till the current generation and after every 5 generations we displays the date-sheet (after 7 seconds wait time)of maximum fitness of current generation and then in the end after successfully completion displays the one Best/ideal date-sheet among all generations.
 
 ## Initial Parameters
